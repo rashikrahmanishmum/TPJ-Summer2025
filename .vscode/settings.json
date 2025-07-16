@@ -1,0 +1,19 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPath": "/home/rashik/esp-idf",
+  "idf.pythonInstallPath": "/usr/bin/python3",
+  "idf.openOcdConfigs": [
+    "board/esp32s2-bridge.cfg"
+  ],
+  "idf.port": "/dev/ttyS0",
+  "idf.toolsPath": "/home/rashik/.espressif",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s2"
+  },
+  "clangd.path": "/home/rashik/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=/home/rashik/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc",
+    "--compile-commands-dir=${workspaceFolder}/build"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "name": "ESP-IDF",
+      "compilerPath": "/home/rashik/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2/bin/xtensa-esp32s2-elf-gcc",
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/home/rashik/esp-idf/components/**",
+        "/home/rashik/esp-idf/components/freertos/FreeRTOS-Kernel/include",
+        "/home/rashik/esp-idf/components/freertos/esp_additions/include",
+        "/home/rashik/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include",
+        "/home/rashik/esp-idf/components/driver/include",
+        "/home/rashik/esp-idf/components/driver/gpio/include",
+        "/home/rashik/esp-idf/components/esp_hw_support/include",
+        "/home/rashik/esp-idf/components/hal/include",
+        "/home/rashik/esp-idf/components/esp_common/include"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "/home/rashik/esp-idf/components",
+          "/home/rashik/esp-idf/components/freertos/FreeRTOS-Kernel/include",
+          "/home/rashik/esp-idf/components/freertos/esp_additions/include",
+          "/home/rashik/esp-idf/components/driver/include",
+          "/home/rashik/esp-idf/components/driver/gpio/include",
+          "/home/rashik/esp-idf/components/esp_hw_support/include",
+          "/home/rashik/esp-idf/components/hal/include",
+          "/home/rashik/esp-idf/components/esp_common/include"
+        ],
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ],
+  "version": 4
+}
