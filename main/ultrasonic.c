@@ -4,6 +4,11 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
+#define delay_us(x) for (volatile int i = 0; i < (x) * 10; ++i) __asm__ __volatile__("nop")
+
+
+
+
 #define TRIG_PIN 6
 #define ECHO_PIN 7
 #define TIMEOUT_US 30000  // 30 ms max wait to avoid infinite loop
@@ -37,9 +42,9 @@ float ultrasonic_get_distance_cm(void) {
 
     // Send 10us trigger pulse
     gpio_set_level(TRIG_PIN, 0);
-    ets_delay_us(2);
+    delay_us(2);
     gpio_set_level(TRIG_PIN, 1);
-    ets_delay_us(10);
+    delay_us(10);
     gpio_set_level(TRIG_PIN, 0);
 
     // Wait for ECHO HIGH with timeout

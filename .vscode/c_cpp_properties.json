@@ -8,17 +8,23 @@
       "cppStandard": "c++17",
       "intelliSenseMode": "gcc-x64",
       "includePath": [
-        "${workspaceFolder}/**",
-        "/home/rashik/esp-idf/components/**",
-        "/home/rashik/esp-idf/components/freertos/FreeRTOS-Kernel/include",
-        "/home/rashik/esp-idf/components/freertos/esp_additions/include",
-        "/home/rashik/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include",
-        "/home/rashik/esp-idf/components/driver/include",
-        "/home/rashik/esp-idf/components/driver/gpio/include",
-        "/home/rashik/esp-idf/components/esp_hw_support/include",
-        "/home/rashik/esp-idf/components/hal/include",
-        "/home/rashik/esp-idf/components/esp_common/include"
-      ],
+  "${workspaceFolder}/**",
+  "/home/rashik/esp-idf/components/**",
+  "/home/rashik/esp-idf/components/freertos/FreeRTOS-Kernel/include",
+  "/home/rashik/esp-idf/components/freertos/esp_additions/include",
+  "/home/rashik/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include",   // <- ADD THIS
+  "/home/rashik/esp-idf/components/driver/include",
+  "/home/rashik/esp-idf/components/esp_hw_support/include",
+  "/home/rashik/esp-idf/components/esp_hw_support/include/soc",
+  "/home/rashik/esp-idf/components/esp_hw_support/include/soc/esp32s2",                        // <- ADD THIS
+  "/home/rashik/esp-idf/components/hal/include",
+  "/home/rashik/esp-idf/components/esp_common/include",
+  "/home/rashik/esp-idf/components/newlib/platform_include",                                   // <- ADD THIS
+  "/home/rashik/esp-idf/components/esp_system/include",
+  "/home/rashik/esp-idf/components/esp_rom/include",                                           // <- ADD THIS
+  "/home/rashik/esp-idf/components/esp_rom/include/esp32s2"                                    // <- ADD THIS
+],
+
       "browse": {
         "path": [
           "${workspaceFolder}",

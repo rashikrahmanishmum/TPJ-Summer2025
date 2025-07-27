@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+
 #include "joystick.h"
 #include "ultrasonic.h"
 #include "touch_sensor.h"
@@ -13,9 +14,9 @@ void app_main(void) {
     // === Initialize all modules ===
     joystick_init();
     ultrasonic_init();
-    touch_sensor_init();
     shake_sensor_init();
     vibration_motor_init();
+    touch_sensor_init();
     i2c_master_init();
     lcd_init();
     dfplayer_init();
@@ -38,19 +39,17 @@ void app_main(void) {
 
         // === Joystick Button Test (Beep) ===
         if (joystick_button_pressed()) {
-            dfplayer_beep();
+            dfplayer_play_beep();  // ✅ corrected name
         }
 
         // === Touch Sensor Test (Beep) ===
-        if (touch_sensor_is_touched()) {
-            dfplayer_beep();
+        if (is_touch_detected()) {  // ✅ corrected name
+            dfplayer_play_beep();
         }
 
-        // === Shake Sensor Test (Vibrate) ===
-        if (shake_sensor_is_shaken()) {
-            vibration_motor_on();
-            vTaskDelay(pdMS_TO_TICKS(500));
-            vibration_motor_off();
+        // === Shake Sensor Test (Vibration) ===
+        if (is_shaken()) {  // ✅ corrected name
+            trigger_vibration(500);  // ✅ replaces on/off
         }
 
         // === Ultrasonic Distance Test ===
